@@ -1,7 +1,8 @@
-import { defineDomHelpers, queryAll } from "@zag-js/dom-utils"
+import { queryAll } from "@zag-js/dom-utils"
+import { defineHelpers } from "@zag-js/dom-query"
 import type { MachineContext as Ctx } from "./radio.types"
 
-export const dom = defineDomHelpers({
+export const dom = defineHelpers({
   getRootId: (ctx: Ctx) => ctx.ids?.root ?? `radio:${ctx.id}`,
   getLabelId: (ctx: Ctx) => ctx.ids?.label ?? `radio:${ctx.id}:label`,
   getItemId: (ctx: Ctx, value: string) => ctx.ids?.item?.(value) ?? `radio:${ctx.id}:item:${value}`,

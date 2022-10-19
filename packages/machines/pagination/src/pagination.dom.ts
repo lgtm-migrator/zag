@@ -1,7 +1,8 @@
-import { defineDomHelpers } from "@zag-js/dom-utils"
+import { defineHelpers } from "@zag-js/dom-query"
+
 import type { MachineContext as Ctx } from "./pagination.types"
 
-export const dom = defineDomHelpers({
+export const dom = defineHelpers({
   getRootId: (ctx: Ctx) => ctx.ids?.root ?? `pagination:${ctx.id}`,
   getPrevItemId: (ctx: Ctx) => ctx.ids?.prevItem ?? `pagination:${ctx.id}:prev-item`,
   getNextItemId: (ctx: Ctx) => ctx.ids?.nextItem ?? `pagination:${ctx.id}:next-item`,

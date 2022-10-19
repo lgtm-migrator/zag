@@ -1,7 +1,8 @@
-import { defineDomHelpers } from "@zag-js/dom-utils"
+import { defineHelpers } from "@zag-js/dom-query"
+
 import type { MachineContext as Ctx } from "./hover-card.types"
 
-export const dom = defineDomHelpers({
+export const dom = defineHelpers({
   getTriggerId: (ctx: Ctx) => ctx.ids?.trigger ?? `hover-card:${ctx.id}:trigger`,
   getContentId: (ctx: Ctx) => ctx.ids?.content ?? `hover-card:${ctx.id}:content`,
   getPositionerId: (ctx: Ctx) => `hover-card:${ctx.id}:popper`,

@@ -1,10 +1,11 @@
-import { getPointRelativeToNode, defineDomHelpers } from "@zag-js/dom-utils"
+import { getPointRelativeToNode } from "@zag-js/dom-utils"
+import { defineHelpers } from "@zag-js/dom-query"
 import { dispatchInputValueEvent } from "@zag-js/form-utils"
 import { styles } from "./slider.style"
 import type { MachineContext as Ctx, Point } from "./slider.types"
 import { utils } from "./slider.utils"
 
-export const dom = defineDomHelpers({
+export const dom = defineHelpers({
   ...styles,
 
   getRootId: (ctx: Ctx) => ctx.ids?.root ?? `slider:${ctx.id}`,

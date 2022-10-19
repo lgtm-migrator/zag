@@ -30,6 +30,7 @@
   },
   "dependencies": {
     "@zag-js/core": "workspace:*",
+    "@zag-js/dom-query": "workspace:*",
     "@zag-js/element-size": "workspace:*",
     "@zag-js/slider": "workspace:*",
     "@zag-js/types": "workspace:*"

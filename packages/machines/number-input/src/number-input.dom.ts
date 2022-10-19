@@ -1,8 +1,9 @@
-import { defineDomHelpers, isSafari, MAX_Z_INDEX, supportsPointerEvent } from "@zag-js/dom-utils"
+import { isSafari, MAX_Z_INDEX, supportsPointerEvent } from "@zag-js/dom-utils"
+import { defineHelpers } from "@zag-js/dom-query"
 import { roundToDevicePixel, wrap } from "@zag-js/number-utils"
 import type { MachineContext as Ctx } from "./number-input.types"
 
-export const dom = defineDomHelpers({
+export const dom = defineHelpers({
   getRootId: (ctx: Ctx) => ctx.ids?.root ?? `number-input:${ctx.id}`,
   getInputId: (ctx: Ctx) => ctx.ids?.input ?? `number-input:${ctx.id}:input`,
   getIncButtonId: (ctx: Ctx) => ctx.ids?.incBtn ?? `number-input:${ctx.id}:inc-btn`,

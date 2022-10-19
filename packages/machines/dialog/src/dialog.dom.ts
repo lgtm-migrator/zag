@@ -1,7 +1,7 @@
-import { defineDomHelpers } from "@zag-js/dom-utils"
+import { defineHelpers } from "@zag-js/dom-query"
 import type { MachineContext as Ctx } from "./dialog.types"
 
-export const dom = defineDomHelpers({
+export const dom = defineHelpers({
   getUnderlayId: (ctx: Ctx) => ctx.ids?.underlay ?? `dialog:${ctx.id}:underlay`,
   getBackdropId: (ctx: Ctx) => ctx.ids?.backdrop ?? `dialog:${ctx.id}:backdrop`,
   getContentId: (ctx: Ctx) => ctx.ids?.content ?? `dialog:${ctx.id}:content`,
